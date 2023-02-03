@@ -1,28 +1,28 @@
---Create a clothing store database
+--Create a grocery store database
 
-CREATE TABLE Itemlist (id integer primary key, name text, price integer, quantity integer, gender text);
+CREATE TABLE Itemlist (id integer primary key, name text, price integer, quantity integer, section text);
 
-INSERT INTO Itemlist VALUES( 1 ,"Jeans", 50, 20,"Male");
-INSERT INTO Itemlist VALUES( 2,"Skirt", 100, 15, "Female");
-INSERT INTO Itemlist VALUES(3,"Wallet", 20, 12,"Male");
-INSERT INTO Itemlist VALUES(4,"Leggings", 10, 150,"Female");
-INSERT INTO Itemlist VALUES(5,"Hats", 13, 200,"Coed");
-INSERT INTO Itemlist VALUES(6,"Socks", 3, 120,"Coed");
-INSERT INTO Itemlist VALUES(7,"Shorts", 12,130,"Male");
-INSERT INTO Itemlist VALUES(8,"Purse", 30,100,"Female");
-INSERT INTO Itemlist VALUES(9,"Cologne",45,50,"Male");
-INSERT INTO Itemlist VALUES(10,"Perfume",40,30,"Female");
-INSERT INTO Itemlist VALUES(11,"Suit",100,20,"Male");
-INSERT INTO Itemlist VALUES(12,"Dress",75,30,"Female");
-INSERT INTO Itemlist VALUES(13,"Dress shoes",60,40,"Male");
-INSERT INTO Itemlist VALUES(14,"Heels",50,20,"Female");
-INSERT INTO Itemlist VALUES(15,"Watches",100,30,"Male");
+INSERT INTO Itemlist VALUES( 1 ,"Apple", 0.99, 150, "Fruits");
+INSERT INTO Itemlist VALUES( 2,"Cheesecake", 5.99, 15, "Bakery");
+INSERT INTO Itemlist VALUES(3,"Handwash", 2.99, 35, "Hygiene");
+INSERT INTO Itemlist VALUES(4,"Mixed Nuts", 11.99, 40, "Snacks");
+INSERT INTO Itemlist VALUES(5,"Banana", 0.5, 200, "Fruits");
+INSERT INTO Itemlist VALUES(6,"Chicken", 8.99, 25, "Meat");
+INSERT INTO Itemlist VALUES(7,"Ketchup", 1.99, 75, "Condiments");
+INSERT INTO Itemlist VALUES(8,"Cupcakes", 3.99, 20, "Bakery");
+INSERT INTO Itemlist VALUES(9,"Toothpaste", 1.5, 50, "Hygiene");
+INSERT INTO Itemlist VALUES(10,"Peanut butter", 2.75, 30, "Snacks");
+INSERT INTO Itemlist VALUES(11,"Pineapple", 2.99, 20, "Fruits");
+INSERT INTO Itemlist VALUES(12,"Ribeye", 10.5, 30, "Meat");
+INSERT INTO Itemlist VALUES(13,"Mayo", 4.99, 15, "Condiments");
+INSERT INTO Itemlist VALUES(14,"Bread", 3.5, 20, "Bakery");
+INSERT INTO Itemlist VALUES(15,"Shampoo", 4.99, 20, "Hygiene");
 
 --Display database ordered by price 
 SELECT * FROM Itemlist ORDER BY Price;
 
---What's the total quantity of items for each gender?
-SELECT gender,SUM(quantity) FROM Itemlist GROUP BY gender;
+--What's the total quantity of items for each section?
+SELECT section,SUM(quantity) FROM Itemlist GROUP BY section;
 
 
 

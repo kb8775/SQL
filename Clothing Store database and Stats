@@ -1,0 +1,34 @@
+--Create a clothing store database
+
+CREATE TABLE Itemlist (id integer primary key, name text, price integer, quantity integer, gender text);
+
+INSERT INTO Itemlist VALUES( 1 ,"Jeans", 50, 20,"Male");
+INSERT INTO Itemlist VALUES( 2,"Skirt", 100, 15, "Female");
+INSERT INTO Itemlist VALUES(3,"Wallet", 20, 12,"Male");
+INSERT INTO Itemlist VALUES(4,"Leggings", 10, 150,"Female");
+INSERT INTO Itemlist VALUES(5,"Hats", 13, 200,"Coed");
+INSERT INTO Itemlist VALUES(6,"Socks", 3, 120,"Coed");
+INSERT INTO Itemlist VALUES(7,"Shorts", 12,130,"Male");
+INSERT INTO Itemlist VALUES(8,"Purse", 30,100,"Female");
+INSERT INTO Itemlist VALUES(9,"Cologne",45,50,"Male");
+INSERT INTO Itemlist VALUES(10,"Perfume",40,30,"Female");
+INSERT INTO Itemlist VALUES(11,"Suit",100,20,"Male");
+INSERT INTO Itemlist VALUES(12,"Dress",75,30,"Female");
+INSERT INTO Itemlist VALUES(13,"Dress shoes",60,40,"Male");
+INSERT INTO Itemlist VALUES(14,"Heels",50,20,"Female");
+INSERT INTO Itemlist VALUES(15,"Watches",100,30,"Male");
+
+--Display database ordered by price 
+SELECT * FROM Itemlist ORDER BY Price;
+
+--What's the total quantity of items for each gender?
+SELECT gender,SUM(quantity) FROM Itemlist GROUP BY gender;
+
+
+
+
+
+
+
+
+

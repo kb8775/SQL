@@ -1,4 +1,6 @@
-/*CREATE TABLE BIT_DB.Spotifydata (
+# Here I inserted the Spotify Data.csv into the table and explored the data running some SQL queries.
+
+CREATE TABLE BIT_DB.Spotifydata (
 id integer PRIMARY KEY,
 artist_name varchar NOT NULL,
 track_name varchar NOT NULL,
@@ -16,9 +18,7 @@ liveness decimal(5,4) NOT NULL,
 valence decimal(4,3) NOT NULL,
 tempo decimal(6,3) NOT NULL,
 duration_ms integer NOT NULL,
-time_signature integer NOT NULL )*/
-
-#Then I inserted the Spotify Data .csv into the table.
+time_signature integer NOT NULL);
 
 #Next, I explored the data using the following SQL. 
 
@@ -31,12 +31,12 @@ artist_name
 ,avg(danceability)
 ,avg(energy)
 FROM BIT_DB.spotifydata
-GROUP BY artist_name, track_name
+GROUP BY artist_name, track_name;
 
-/*#Then I determined who the Top 10 artists are by popularity
+# Then I determined who the Top 10 artists are by popularity
 SELECT track_name, artist_name, popularity
 FROM BIT_DB.spotifydata
 ORDER BY popularity desc
-LIMIT 10*/
+LIMIT 10;
 
 

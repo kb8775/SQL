@@ -1,2 +1,1 @@
-# SQL
-SQL Portfolio
+Kishor's SQL Portfolio
